@@ -1,0 +1,16 @@
+.header-main {
+    padding: 3em 3em;
+    color: white;
+}
+.main-nav {
+    height: 57px;
+}
+.main-nav li a {
+    color: white!important;
+    border-color: white;
+    line-height: 57px;
+}
+.nav-box,
+.main-nav {
+    overflow: visible;
+}
