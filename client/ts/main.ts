@@ -2,7 +2,7 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import {Component} from 'angular2/core';
-import {bootstrap} from 'angular2/bootstrap';
+import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 import {MeteorComponent} from 'angular2-meteor/meteor_component';
 
 //Server imports
