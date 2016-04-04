@@ -1,0 +1,28 @@
+{
+  "name": "hometown-zp",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  },
+  "version": "1.0.0-beta",
+  "description": "This is an description info for city of Zaporizhzhya",
+  "main": "index.html",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vetaliyrh7/hometown.git"
+  },
+  "keywords": [
+    "hometown",
+    "info"
+  ],
+  "author": "Vitaliy Kononenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vetaliyrh7/hometown/issues"
+  },
+  "homepage": "https://github.com/vetaliyrh7/hometown#readme"
+}
