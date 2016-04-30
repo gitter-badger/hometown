@@ -14,3 +14,16 @@
 .main-nav {
     overflow: visible;
 }
+.preview-img {
+    height: 192px;
+    width: 192px;
+}
+.flex-container {
+    display: flex;
+}
+.flex-child.flex-sm {
+    flex: 1;
+}
+.flex-child.flex-lg {
+    flex: 5;
+}

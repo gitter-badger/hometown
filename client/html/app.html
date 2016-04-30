@@ -2,19 +2,22 @@
     <h2>{{headerText}}</h2>
 </div>
 <div class="row light-blue darken-4">
-    <div class="col s12 m4 light-blue darken-4 nav-box">
+    <div class="col s12 m6 light-blue darken-4 nav-box">
         <ul class="tabs light-blue darken-4 main-nav">
-            <li class="tab col s3" (click)="changeHeader('Главная')">
-                <a class="active" href="#test1">Главная</a>
+            <li class="tab" (click)="changeHeader('Головна')">
+                <a class="active" href="#test1">Головна</a>
             </li>
-            <li class="tab col s3" (click)="changeHeader('Отдых')">
-                <a href="#test2">Отдых</a>
+            <li class="tab" (click)="changeHeader('ВНЗ')">
+                <a href="#test2">ВНЗ</a>
             </li>
-            <li class="tab col s3" (click)="changeHeader('Маршруты')">
-                <a href="#test3">Маршруты</a>
+            <li class="tab" (click)="changeHeader('Відомі місця')">
+                <a href="#test3">Відомі місця</a>
             </li>
-            <li class="tab col s3" (click)="changeHeader('ВУЗы')">
-                <a href="#test4">ВУЗы</a>
+            <li class="tab" (click)="changeHeader('Кінотеатри')">
+                <a href="#test4">Кінотеатри</a>
+            </li>
+            <li class="tab" (click)="changeHeader('FAQ')">
+                <a href="#test5">FAQ</a>
             </li>
         </ul>
     </div>
@@ -29,5 +32,8 @@
     <routes></routes>
 </div>
 <div id="test4" class="container">
+    <study></study>
+</div>
+<div id="test5" class="container">
     <study></study>
 </div>

@@ -3,6 +3,9 @@ import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import {Component} from 'angular2/core';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
+import 'ng2-material/all.webpack';
+
+import {MATERIAL_PROVIDERS, MATERIAL_DIRECTIVES} from 'ng2-material/all'
 
 //Server imports
 
@@ -13,7 +16,7 @@ import {MainPage} from './ts/main';
 @Component({
     selector: 'app',
     templateUrl: 'client/html/app.html',
-    directives: [MainPage]
+    directives: [MainPage, MATERIAL_DIRECTIVES]
 })
 class Hometown {
     headerText: string;
@@ -40,4 +43,4 @@ class Hometown {
     }
 }
 
-bootstrap(Hometown);
+bootstrap(Hometown, [MATERIAL_PROVIDERS]);
