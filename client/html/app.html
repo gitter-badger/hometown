@@ -5,7 +5,7 @@
     <div class="col s12 m6 light-blue darken-4 nav-box">
         <ul class="tabs light-blue darken-4 main-nav">
             <li class="tab" (click)="changeHeader('Головна')">
-                <a class="active" href="#test1">Головна</a>
+                <a class="active" [routerLink]="['/MainPage']">Головна</a>
             </li>
             <li class="tab" (click)="changeHeader('ВНЗ')">
                 <a href="#test2">ВНЗ</a>
@@ -21,19 +21,40 @@
             </li>
         </ul>
     </div>
+    <div class="col s12 m6 lignt-blue darken-4 nav-box">
+        <ul class="tabs light-blue darken-4 main-nav pull-right">
+            <li class="tab">
+                <!-- Modal Trigger -->
+                <a [routerLink]="['/Login']">Login</a>
+            </li>
+            <li class="tab">
+                <a (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
 </div>
-<div id="test1" class="container">
-    <main></main>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
-<div id="test2" class="container">
-    <relax></relax>
-</div>
-<div id="test3" class="container">
-    <routes></routes>
-</div>
-<div id="test4" class="container">
-    <study></study>
-</div>
-<div id="test5" class="container">
-    <study></study>
-</div>
+<!--<div id="test1" class="container">-->
+    <!--<main></main>-->
+<!--</div>-->
+<!--<div id="test2" class="container">-->
+    <!--<div [hidden]="user">-->
+        <!--<button md-button>Login</button>-->
+        <!--<button md-button>Sign up</button>-->
+    <!--</div>-->
+    <!--<div [hidden]="!user">-->
+        <!--<button md-button (click)="logout()">Logout</button>-->
+    <!--</div>-->
+    <!--<relax></relax>-->
+<!--</div>-->
+<!--<div id="test3" class="container">-->
+    <!--<routes></routes>-->
+<!--</div>-->
+<!--<div id="test4" class="container">-->
+    <!--<study></study>-->
+<!--</div>-->
+<!--<div id="test5" class="container">-->
+    <!--<study></study>-->
+<!--</div>-->

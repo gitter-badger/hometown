@@ -27,3 +27,6 @@
 .flex-child.flex-lg {
     flex: 5;
 }
+#toast-container {
+    max-width: 100%!important;
+}

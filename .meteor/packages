@@ -20,3 +20,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 angular2-compilers
 materialize:materialize
 accounts-password
+jalik:ufs
+jalik:ufs-gridfs

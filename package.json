@@ -5,20 +5,23 @@
     "start": "meteor run"
   },
   "dependencies": {
+
+  },
+  "version": "1.0.0-beta",
+  "description": "This is an description info for city of Zaporizhzhya",
+  "main": "index.html",
+  "devDependencies": {
     "angular2": "^2.0.0-beta.12",
     "angular2-meteor": "^0.5.2",
     "angular2-meteor-auto-bootstrap": "^0.5.1",
     "es6-shim": "^0.35.0",
     "lodash": "^4.11.1",
     "meteor-node-stubs": "~0.2.0",
-    "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.2",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "rxjs": "5.0.0-beta.6",
     "zone.js": "^0.6.8"
   },
-  "version": "1.0.0-beta",
-  "description": "This is an description info for city of Zaporizhzhya",
-  "main": "index.html",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vetaliyrh7/hometown.git"
