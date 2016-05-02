@@ -21,20 +21,37 @@
             </li>
         </ul>
     </div>
-    <div class="col s12 m6 lignt-blue darken-4 nav-box">
-        <ul class="tabs light-blue darken-4 main-nav pull-right">
-            <li class="tab">
-                <!-- Modal Trigger -->
-                <a [routerLink]="['/Login']">Login</a>
+    <div class="col s12 m2 lignt-blue darken-4 nav-box pull-right">
+        <ul class="tabs light-blue darken-4 main-nav">
+            <li class="tab" [hidden]="user">
+                <button md-raised-button  class="md-raised auth-btn light-blue darken-2 white-text"
+                        (click)="login()"
+                        md-button>
+                    Увійти
+                </button>
             </li>
-            <li class="tab">
-                <a (click)="logout()">Logout</a>
+            <li class="tab" [hidden]="!user">
+                <button md-raised-button class="md-raised auth-btn light-blue darken-2 white-text"
+                        (click)="logout()"
+                        md-button>
+                    Вийти
+                </button>
             </li>
         </ul>
     </div>
 </div>
 <div class="container">
     <router-outlet></router-outlet>
+    <div [hidden]="user">
+    <button md-button>Login</button>
+    <button md-button>Sign up</button>
+        <button md-fab class="md-mini" aria-label="Eat cake">
+            <i md-icon>cake</i>
+        </button>
+    </div>
+    <div [hidden]="!user">
+    <button md-button (click)="logout()">Logout</button>
+    </div>
 </div>
 <!--<div id="test1" class="container">-->
     <!--<main></main>-->

@@ -6,7 +6,7 @@ import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 import 'ng2-material/all.webpack';
 
 import {MATERIAL_PROVIDERS, MATERIAL_DIRECTIVES} from 'ng2-material/all'
-import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, RouterLink} from 'angular2/router';
+import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, RouterLink, Router} from 'angular2/router';
 import {APP_BASE_HREF} from 'angular2/platform/common';
 import {InjectUser, LoginButtons} from 'angular2-meteor-accounts-ui';
 
@@ -19,6 +19,7 @@ import {Recover} from './ts/recover.ts';
 
 //My components imports
 import {MainPage} from './ts/main';
+import undefined = Match.undefined;
 
 
 @Component({
@@ -33,14 +34,14 @@ import {MainPage} from './ts/main';
     { path: '/recover', as: 'Recover', component: Recover }
 
 ])
-@InjectUser()
+@InjectUser("")
 class Hometown {
     headerText: string;
-    constructor() {
-        this.headerText = 'Главная';
+    constructor(private router: Router) {
+        this.headerText = 'Головна';
         setTimeout(function(){
             //JQuery Materialize functions
-            $('ul.tabs').tabs();
+            $('.tabs').tabs();
             $('.dropdown-button').dropdown({
                     inDuration: 300,
                     outDuration: 225,
@@ -58,9 +59,14 @@ class Hometown {
         this.headerText = name;
     }
 
+    login() {
+        this.router.navigate(['/Login']);
+    }
+
     logout() {
         Materialize.toast('Вихід здійснено', 3000, 'green');
         Meteor.logout();
+        this.router.navigate(['/MainPage']);
     }
 }
 
