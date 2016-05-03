@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="card">
+        <div class="card-content row flex-container">
+            <div class="col s12 m3 flex-child flex-sm">
+                <img class="img-responsive preview-img" [src]="place.cover"  alt="{{place.name}}">
+            </div>
+            <div class="col s12 m9 flex-child flex-lg">
+                    <span>Адреса:</span> {{place.address}} <br>
+                    <span>Телефон:</span> {{place.phone}} <br>
+                    <span>Додаткова інформація:</span> {{place.links}} <br>
+                    <span>Дата створення:</span> {{place.created}} <br>
+
+            </div>
+            <div class="row">
+                <p>{{place.text}}</p>
+            </div>
+        </div>
+        <div class="card-action">
+            MAP WILL BE HERE SOON
+        </div>
+    </div>
+</div>

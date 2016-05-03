@@ -1,0 +1,1 @@
+export var Places = new Mongo.Collection('places');

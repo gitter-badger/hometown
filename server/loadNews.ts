@@ -1,9 +1,9 @@
-import {MainNews} from '../collections/main-news';
+import {Places} from '../collections/places';
 
 export function loadNews() {
-    if (MainNews.find().count() === 0) {
+    if (Places.find().count() === 0) {
 
-        var news = [{
+        var places = [{
             title: 'Features',
             text: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.',
             cover: '/img/play.png'
@@ -14,8 +14,8 @@ export function loadNews() {
             }
         ];
 
-        for (var i = 0; i < news.length; i++) {
-            MainNews.insert(news[i]);
+        for (var i = 0; i < places.length; i++) {
+            Places.insert(places[i]);
         }
     }
 };

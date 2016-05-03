@@ -1,4 +1,4 @@
 import {loadNews} from './loadNews.ts';
-import './main-news.ts';
+import './places.ts';
 
 Meteor.startup(loadNews);

@@ -1,17 +1,28 @@
 <div class="row">
-    <form class="card">
+    <form class="card"
+          [ngFormModel]="placesForm" #f="ngForm" (submit)="addPlace(f.value)">
         <div class="card-content">
             <span class="card-title">Створення публікації</span>
-            <input placeholder="Заголовок:" type="text" />
-            <input placeholder="Адреса:" type="text" />
-            <input placeholder="Телефон:" type="text" />
-            <input placeholder="Поштова скринька:" type="text" />
-            <textarea class="materialize-textarea" md-input placeholder="Текст публікації:" ></textarea>
-            <input type="file" ng2-file-select [uploader]="uploader" />
+            <input placeholder="Заголовок:" type="text" ngControl="title"/>
+            <input placeholder="Адреса:" type="text" ngControl="address"/>
+            <input placeholder="Телефон:" type="text" ngControl="phone"/>
+            <input placeholder="Додаткова інформація:" type="text" ngControl="links"/>
+            <select ngControl="type" class="visible-allways">
+                <option value="" disabled selected>Категорія</option>
+                <option value="News">НОВИНИ</option>
+                <option value="Education">ВНЗ</option>
+                <option value="Places">ВІДОМІ МІСЦЯ</option>
+                <option value="Cinemas">КІНОТЕАТРИ</option>
+            </select>
+            <textarea class="materialize-textarea"
+                      md-input
+                      placeholder="Текст публікації:"
+                      ngControl="text"></textarea>
+            <!--<input type="file" ng2-file-select [uploader]="uploader" />-->
         </div>
         <div class="card-action">
-            <a href="#">Підтвердити зміни</a>
-            <a href="#">Відмінити</a>
+            <button class="btn light-blue darken-2" type="submit">Підтвердити зміни</button>
+            <button (click)="clearForm()" class="btn red darken-2">Відмінити</button>
         </div>
     </form>
 </div>

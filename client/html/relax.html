@@ -1,0 +1,16 @@
+<div class="row" *ngFor="let relax of relax">
+    <div class="card">
+        <div class="card-content row flex-container">
+            <div class="col s12 m3 flex-child flex-sm">
+                <img class="img-responsive preview-img" [src]="relax.cover"  alt="{{relax.name}}">
+            </div>
+            <div class="col s12 m9 flex-child flex-lg">
+                <span class="card-title">{{relax.title}}</span>
+                <p>{{relax.text}}</p>
+            </div>
+        </div>
+        <div class="card-action">
+            <a [routerLink]="['/PlaceDetails', {placeId: relax._id}]">Дізнатись більше</a>
+        </div>
+    </div>
+</div>

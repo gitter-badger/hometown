@@ -10,15 +10,18 @@ import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, RouterLink, Router} fr
 import {APP_BASE_HREF} from 'angular2/platform/common';
 import {InjectUser, LoginButtons} from 'angular2-meteor-accounts-ui';
 
-import {Login} from './ts/login.ts';
-import {Signup} from './ts/signup.ts';
-import {Recover} from './ts/recover.ts';
-
-
 //Server imports
 
 //My components imports
 import {MainPage} from './ts/main';
+import {Login} from './ts/login';
+import {Signup} from './ts/signup';
+import {Recover} from './ts/recover';
+import {Education} from './ts/education';
+import {Relax} from './ts/relax';
+import {Cinema} from './ts/cinema';
+import {FAQ} from './ts/faq';
+import {PlaceDetails} from './ts/place_details.ts';
 import undefined = Match.undefined;
 
 
@@ -29,12 +32,17 @@ import undefined = Match.undefined;
 })
 @RouteConfig([
     { path: '/', as: 'MainPage', component: MainPage },
+    { path: '/education', as: 'Education', component: Education },
+    { path: '/places', as: 'Places', component: Relax },
+    { path: '/cinemas', as: 'Cinemas', component: Cinema },
+    { path: '/faq', as: 'FAQ', component: FAQ },
     { path: '/login', as: 'Login', component: Login },
     { path: '/signup', as: 'Signup', component: Signup },
+    { path: '/details/:placeId', as: 'PlaceDetails', component: PlaceDetails },
     { path: '/recover', as: 'Recover', component: Recover }
 
 ])
-@InjectUser("")
+@InjectUser()
 class Hometown {
     headerText: string;
     constructor(private router: Router) {
@@ -52,7 +60,7 @@ class Hometown {
                     alignment: 'left' // Displays dropdown with edge aligned to the left of button
                 }
             );
-        }, 200)//Set Timeout [END]
+        }, 200)
     }
 
     changeHeader(name) {

@@ -8,16 +8,16 @@
                 <a class="active" [routerLink]="['/MainPage']">Головна</a>
             </li>
             <li class="tab" (click)="changeHeader('ВНЗ')">
-                <a href="#test2">ВНЗ</a>
+                <a [routerLink]="['/Education']">ВНЗ</a>
             </li>
             <li class="tab" (click)="changeHeader('Відомі місця')">
-                <a href="#test3">Відомі місця</a>
+                <a [routerLink]="['/Places']">Відомі місця</a>
             </li>
             <li class="tab" (click)="changeHeader('Кінотеатри')">
-                <a href="#test4">Кінотеатри</a>
+                <a [routerLink]="['/Cinemas']">Кінотеатри</a>
             </li>
             <li class="tab" (click)="changeHeader('FAQ')">
-                <a href="#test5">FAQ</a>
+                <a [routerLink]="['/FAQ']">FAQ</a>
             </li>
         </ul>
     </div>
@@ -42,16 +42,6 @@
 </div>
 <div class="container">
     <router-outlet></router-outlet>
-    <div [hidden]="user">
-    <button md-button>Login</button>
-    <button md-button>Sign up</button>
-        <button md-fab class="md-mini" aria-label="Eat cake">
-            <i md-icon>cake</i>
-        </button>
-    </div>
-    <div [hidden]="!user">
-    <button md-button (click)="logout()">Logout</button>
-    </div>
 </div>
 <!--<div id="test1" class="container">-->
     <!--<main></main>-->

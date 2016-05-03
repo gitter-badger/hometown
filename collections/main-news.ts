@@ -1,1 +1,0 @@
-export var MainNews = new Mongo.Collection('news');
